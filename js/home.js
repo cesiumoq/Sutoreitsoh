@@ -12,12 +12,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     ];
     */
     const videos = [
-        "https://media.githubusercontent.com/media/varkelth/Sutoreitsoh/main/img/space.mp4",
-        "https://media.githubusercontent.com/media/varkelth/Sutoreitsoh/main/img/tuffsong.mp4",
-        "https://media.githubusercontent.com/media/varkelth/Sutoreitsoh/main/img/beztebyabottomfarger.mp4",
-        "https://media.githubusercontent.com/media/varkelth/Sutoreitsoh/main/img/hvh.mp4"
+        "https://media.githubusercontent.com/media/cesiumoq/Sutoreitsoh/main/img/space.mp4",
+        "https://media.githubusercontent.com/media/cesiumoq/Sutoreitsoh/main/img/tuffsong.mp4",
+        "https://media.githubusercontent.com/media/cesiumoq/Sutoreitsoh/main/img/beztebyabottomfarger.mp4",
+        "https://media.githubusercontent.com/media/cesiumoq/Sutoreitsoh/main/img/hvh.mp4"
     ];
-    // Get current index from localStorage, rotate to next
+    // Get current index for rotatation
     let videoIndex = parseInt(localStorage.getItem('videoIndex') || '0');
     const currentVideo = videos[videoIndex];
     // Save next index for next refresh
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             videoElement.classList.add('extra-dark');
         }
 
-        // Detect mobile - skip blob fetch as it causes issues on mobile
+        // Detect mobile
         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
         function setVideoSrc(url) {
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 });
         }
 
-        // Retry on error (mobile sometimes fails first try)
+        // Retry on error
         let retryCount = 0;
         videoElement.addEventListener('error', function () {
             if (retryCount < 2) {
@@ -89,26 +89,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }, 1000);
 
 
-    // --- Falling  Text ---
+    // --- Rain ---
     const creepyTexts = [
         "...",
-        "watching",
-        "silence",
-        "void",
-        "lost",
-        "forgotten",
-        "hollow",
-        "whispers",
-        "darkness",
-        "fading",
-        "eternal",
-        "shadows",
-        "decay",
-        "emptiness",
-        "nowhere",
-        "help",
-        "run",
-        "behind you"
+        "cesium",
+        "cesium",
+        "cesium",
+        "cesium",
+        "cesium",
+        "cesium",
+        "cesium",
+        "cesium",
+        "cesium",
+        "cesium",
+        "cesium",
+        "cesium",
+        "cesium",
+        "cesium",
+        "cesium",
+        "cesium",
+        "cesium"
     ];
 
     function createFallingText() {
